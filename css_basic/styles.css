@@ -1,1 +1,45 @@
-t
+/* Make the body a flex container in column direction */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures the body fills the viewport */
+    margin: 0; /* remove default margin */
+}
+
+/* Main container is a flex row for article + aside */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* grows to fill available space */
+}
+
+/* Article takes 2/3 of the width */
+article {
+    flex: 2;           /* occupies 2 parts */
+    overflow-y: auto;  /* scroll if content is too tall */
+    padding: 10px;     /* optional spacing */
+    background-color: #fdfdfd; /* optional background */
+}
+
+/* Aside takes 1/3 of the width */
+aside {
+    flex: 1;           /* occupies 1 part */
+    overflow-y: auto;  /* scroll if content is too tall */
+    padding: 10px;     /* optional spacing */
+    background-color: #f0f0f0; /* optional background */
+}
+
+/* Header styling */
+header {
+    padding: 15px;
+    background-color: #dcdcdc; /* example color */
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    padding: 15px;
+    background-color: #dcdcdc; /* example color */
+    text-align: center;
+}
+
